@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .heart {
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            position: relative;
+            animation: jump 0.6s infinite alternate;
+        }
+        /* 心脏跳动 */
+        @keyframes jump {
+            from {
+            }
+            to {
+                transform: scale(1.3);
+            }
+        }
+        /* 边框阴影模糊 */
+        @keyframes boxShadow {
+            from {
+            }
+            to {
+                box-shadow: 0 0 10px crimson;
+            }
+        }
+        .heart div{
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            position:absolute;
+            animation: boxShadow 1s infinite alternate;
+        }
+        .radius50 {
+            border-radius: 50%;
+        }
+        .right {
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            position: absolute;
+            right: 0;
+            animation: boxShadow 1s infinite alternate;
+        }
+        .bottom {
+            bottom: 29px;
+            left:50px;
+            transform: rotateZ(45deg) scale(.85, .85);
+            animation: boxShadow 1s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+<div class="heart">
+    <div class="left radius50"></div>
+    <div class="right radius50"></div>
+    <div class="bottom"></div>
+</div>
+</body>
+</html>
